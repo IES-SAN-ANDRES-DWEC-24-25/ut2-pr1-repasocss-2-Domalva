@@ -1,88 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Posicionamiento5</title>
-  <meta charset="UTF-8">
-  <style type="text/css">
-    
-* {
-  margin:0;
-  padding:0;
-  font-size: 1.2em;
-}
+  <!--
+  Mostrar un div superior y otro para cookies con posicionamiento fijo. Juega con los posicionamientos de otros div, muévete con el scroll y comprueba el funcionamiento.
+  -->
+  <head>
+    <title>Posicionamiento5</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      * {
+        margin:0;
+        padding:0;
+        font-size: 1.2em;
+      }
 
-#barrasuperior{
-  left:0px;
-  width:100%;
-  height:50px;
-  background-color:black;
-  color:white;
-}
+      /* Hay que hacerla fija */
+      #barrasuperior{
+        position: fixed;
+        top: 0;
+        left:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
 
-#menu{
-  left:0px;
-  top:50px;
-  height:40px;
+        width:100%;
+        height:50px;
+        background-color:black;
+        color:white;
+      }
 
-  position: relative;
-  background-color:#eee;
-}
+      /* Hay que hacerlo fijo */
+      #menu{
+        padding-top: 50px; /* Para compensar la altura de la barra superior */
 
-#contenido{
-  padding-top:70px;
-}
-#cookies {
-   width:100%;
-  height:50px;
-  bottom: 100px;
-  background-color:green;
-  color:white;
-} 
-  </style>
+        left:0px;
+        top:50px;
+        height:40px;
+        position: relative;
+        background-color:#eee;
+      }
 
-</head>
-<body>
-<div id="barrasuperior">
-Div superior
-</div>
-<div id="menu">
-Menu secundario...
-</div>
-<div id="contenido">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-<br>
----------------------------------
-<br>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-<br>
+      /* Compensar la altura del menú y la barra superior */ 
+      #contenido{
+        padding-top:100px;
+      }
 
-</div>
-<div id="cookies">
-  ----------------este es el aviso de cookies --------
-</div>
-<div>
-  <br>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-<br>
----------------------------------
----------------------------------
-<br>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-<br>
----------------------------------
-<br>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-<br>
-</div>
-</body>
+      /* Hay que hacer fijo el aviso de cookies */
+      #cookies {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        width:100%;
+        height:50px;
+        background-color:green;
+        color:white;
+      } 
+    </style>
+  </head>
+  <body>
+    <div id="barrasuperior">
+    Div superior
+    </div>
+    <div id="menu">
+    Menu secundario...
+    </div>
+    <div id="contenido">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+    <br>
+    ---------------------------------
+    <br>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+    <br>
+
+    </div>
+    <div id="cookies">
+      ----------------este es el aviso de cookies --------
+    </div>
+    <div>
+      <br>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+    <br>
+    ---------------------------------
+    ---------------------------------
+    <br>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+    <br>
+    ---------------------------------
+    <br>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+    <br>
+    </div>
+  </body>
 </html>

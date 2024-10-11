@@ -1,9 +1,69 @@
-<!DOCTYPE html>
+<!-- 
+  Hacer un menú de hipervínculos que muestre los elementos de forma vertical. Se deberán utilizar pseudoclases para cambiar el color de fondo según si el link está:
+  Visitado
+  No visitado
+  El ratón está sobre el link
+  El link tiene foco
+  Instrucciones:
+
+  Eliminar el subrayado de los enlaces.
+  Los párrafos del menú tendrán un margen y padding de 0px.
+  El tipo de letra será Arial.
+  Los enlaces tendrán:
+  Un ancho de 160px.
+  Un padding de 3px.
+  Color de fondo: #f7f8e8.
+  Texto centrado.
+  Un borde inferior de 1px de grosor con color #eeeeee.
+  Pseudoclases:
+
+  Cuando el elemento aún no se ha visitado: color de fuente verde.
+  Cuando el elemento se ha visitado: color de fuente rojo.
+  Cuando se pasa el ratón por encima: color de fondo #336699 y color de la fuente rosa.
+  Al hacer clic: color de fondo #336699 y color de la fuente blanco.
+  Pista: Para conseguir el aspecto deseado, trabaja con la propiedad display.
+-->
+ <!DOCTYPE html>
 <html>
 <head>
   <title>ut2pr1ej7y8-pseudoclases</title>
   <meta charset="UTF-8">
+  <style>
+    #menu p {
+      /* Estilos generales para el menú */
+      margin: 0;
+      padding: 0;
+    }
 
+    #menu a {
+      display: block;
+      width: 160px;
+      padding: 3px;
+      text-align: center;
+      background-color: #f7f8e8;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    /* Pseudo-clases */
+    #menu a:link {
+      color: green; /* Color para los enlaces no visitados*/
+    }
+
+    #menu a:visited{
+      color: red; /* Color para los enlaces visitados */
+    }
+
+    #menu a:hover {
+      background-color: #336699; /* Color cuando el mouse pasa por encima */
+    }
+
+    #menu a:focus, #menu a:active {
+      background-color: #336699;
+      color: white; /* Color cuando se enfoca o hace click */
+    }
+  </style>
 </head>
 <body>
 <p> Visualizando el menú...</p>
