@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+    Mostrar tres div de color rojo, verde y azul con posiciones absolutas
+    Indicar coordenadas para que se superpongan.
+    Inicializar la propiedad z-index de cada elemento de tal manera que quede al frente el div verde, luego el azul, y finalmente el rojo.
+    Define el ancho y alto de las cajas a 200px.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Estilos comunes */
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        /* Estilos de cada caja */
+        .rojo {
+            background-color: red;
+            z-index: 1;
+            top: 50px;
+            left: 50px
+        }
+        .azul {
+            background-color: blue;
+            z-index: 2;
+            top: 70px;
+            left: 70px;
+        }
+        .verde {
+            background-color: green;
+            z-index: 3;
+            top: 90px;
+            left: 90px;
+        }
+    </style>
+</head>
+<body>
+    <!-- La propiedad z-index colocará las cajas, independientemente de cuál se codifique primero -->
+    <div class="box rojo">Esta es la primera caja</div>
+    <div class="box verde">Esta es la tercera caja</div>
+    <div class="box azul">Esta es la segunda caja</div>
+</body>
+</html>
